@@ -69,6 +69,8 @@ export const SERIES_SPECS = [
 			gainValue: true,
 			preset: true,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 		feedbacks: {
 			powerState: true, // Power State (p1 or p0)
@@ -100,6 +102,8 @@ export const SERIES_SPECS = [
 			ins: true, // Has Install Position Control (INSx)
 			sdCard: true, // Has SD Card Recording Control (sdctrl?save=start or sdctrl?save=end)
 			ColorTemperature: false, // Setting Color temperature OSD:B1:A8h
+			BlueGain: false,
+			RedGain: false,
 		},
 	},
 
@@ -117,6 +121,8 @@ export const SERIES_SPECS = [
 			gainValue: true,
 			preset: true,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -148,6 +154,8 @@ export const SERIES_SPECS = [
 			ins: true,
 			sdCard: true,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 	},
 
@@ -165,6 +173,8 @@ export const SERIES_SPECS = [
 			gainValue: true,
 			preset: true,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -196,6 +206,8 @@ export const SERIES_SPECS = [
 			ins: true,
 			sdCard: true,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 	},
 
@@ -213,6 +225,8 @@ export const SERIES_SPECS = [
 			gainValue: true,
 			preset: true,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -244,6 +258,8 @@ export const SERIES_SPECS = [
 			ins: true,
 			sdCard: true,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 	},
 
@@ -261,6 +277,8 @@ export const SERIES_SPECS = [
 			gainValue: true,
 			preset: true,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -292,6 +310,8 @@ export const SERIES_SPECS = [
 			tally: true,
 			sdCard: false,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 	},
 
@@ -309,6 +329,8 @@ export const SERIES_SPECS = [
 			gainValue: true,
 			preset: true,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -340,6 +362,8 @@ export const SERIES_SPECS = [
 			ins: false,
 			sdCard: false,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 	},
 
@@ -357,6 +381,8 @@ export const SERIES_SPECS = [
 			gainValue: true,
 			preset: true,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -388,6 +414,8 @@ export const SERIES_SPECS = [
 			ins: true,
 			sdCard: false,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 	},
 
@@ -405,6 +433,8 @@ export const SERIES_SPECS = [
 			gainValue: true,
 			preset: true,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -436,6 +466,8 @@ export const SERIES_SPECS = [
 			ins: true,
 			sdCard: false,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 	},
 
@@ -453,6 +485,8 @@ export const SERIES_SPECS = [
 			gainValue: true,
 			preset: true,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -484,6 +518,8 @@ export const SERIES_SPECS = [
 			ins: true,
 			sdCard: false,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 	},
 
@@ -501,6 +537,8 @@ export const SERIES_SPECS = [
 			gainValue: true,
 			preset: true,
 			ColorTemperature: true,
+			BlueGain: true,
+			RedGain: true,
 		},
 		feedbacks: {
 			powerState: true,
@@ -532,6 +570,8 @@ export const SERIES_SPECS = [
 			ins: true,
 			sdCard: false,
 			ColorTemperature: { cmd: 'OSD:B1:', dropdown: c.CHOICES_COLOR_TEMPERATURE_HE130},
+			BlueGain: { cmd: 'OBI:', dropdown: c.CHOICES_COLOR_GAIN_HE130()},
+			RedGain: { cmd: 'ORI:', dropdown: c.CHOICES_COLOR_GAIN_HE130()},
 		},
 	},
 
@@ -580,6 +620,8 @@ export const SERIES_SPECS = [
 			ins: true,
 			sdCard: false,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 	},
 
@@ -597,6 +639,8 @@ export const SERIES_SPECS = [
 			gainValue: true,
 			preset: true,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -628,6 +672,8 @@ export const SERIES_SPECS = [
 			ins: true,
 			sdCard: false,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 	},
 
@@ -676,6 +722,8 @@ export const SERIES_SPECS = [
 			ins: true,
 			sdCard: false,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 	},
 
@@ -724,6 +772,8 @@ export const SERIES_SPECS = [
 			ins: true,
 			sdCard: false,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 	},
 
@@ -769,6 +819,8 @@ export const SERIES_SPECS = [
 			tally: false,
 			sdCard: false,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
 		},
 	},
 ]

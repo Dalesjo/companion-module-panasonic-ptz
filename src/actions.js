@@ -774,6 +774,183 @@ export function getActionDefinitions(self) {
 		}
 	}
 
+	if (seriesActions.BlueGain) { 
+		actions.BlueGainUp = {
+			name: 'Color Correction Blue Gain Up',
+			options: [],
+			callback: async (action) => {
+				if (self.BlueGainIndex == seriesActions.BlueGain.dropdown.length) {
+					self.BlueGainIndex = seriesActions.BlueGain.dropdown.length
+				} else if (self.BlueGainIndex < seriesActions.BlueGain.dropdown.length) {
+					self.BlueGainIndex++
+				}
+				self.BlueGainValue = seriesActions.BlueGain.dropdown[self.BlueGainIndex].id
+
+				await sendCam(self, seriesActions.BlueGain.cmd + self.BlueGainValue.toUpperCase())
+			},
+		}
+	}
+	
+	if (seriesActions.BlueGain) {
+		actions.BlueGainDown = {
+			name: 'Color Correction Blue Gain Down',
+			options: [],
+			callback: async (action) => {
+				if (self.BlueGainIndex == 0) {
+					self.BlueGainIndex = 0
+				} else if (self.BlueGainIndex > 0) {
+					self.BlueGainIndex--
+				}
+				self.BlueGainValue = seriesActions.BlueGain.dropdown[self.BlueGainIndex].id
+
+				await sendCam(self, seriesActions.BlueGain.cmd + self.BlueGainValue.toUpperCase())
+			},
+		}
+	}
+
+	if (seriesActions.BlueGain) {
+		actions.BlueGainSet = {
+			name: 'Color Correction Blue Gain Set',
+			options: [
+				{
+					type: 'dropdown',
+					label: 'Color Temperature',
+					id: 'val',
+					default: seriesActions.BlueGain.dropdown[0].id,
+					choices: seriesActions.BlueGain.dropdown,
+				},
+			],
+			callback: async (action) => {
+				
+				let id = action.options.val.toUpperCase();
+				let index = seriesActions.BlueGain.dropdown.findIndex((BlueGain) => BlueGain.id == id);
+
+				self.BlueGainIndex = index;
+				self.BlueGainValue = id;
+
+				await sendCam(self, seriesActions.BlueGain.cmd + id)
+			},
+		}
+	}
+
+		if (seriesActions.RedGain) { 
+		actions.RedGainUp = {
+			name: 'Color Correction Blue Gain Up',
+			options: [],
+			callback: async (action) => {
+				if (self.RedGainIndex == seriesActions.RedGain.dropdown.length) {
+					self.RedGainIndex = seriesActions.RedGain.dropdown.length
+				} else if (self.RedGainIndex < seriesActions.RedGain.dropdown.length) {
+					self.RedGainIndex++
+				}
+				self.RedGainValue = seriesActions.RedGain.dropdown[self.RedGainIndex].id
+
+				await sendCam(self, seriesActions.RedGain.cmd + self.RedGainValue.toUpperCase())
+			},
+		}
+	}
+	
+	if (seriesActions.RedGain) {
+		actions.RedGainDown = {
+			name: 'Color Correction Blue Gain Down',
+			options: [],
+			callback: async (action) => {
+				if (self.RedGainIndex == 0) {
+					self.RedGainIndex = 0
+				} else if (self.RedGainIndex > 0) {
+					self.RedGainIndex--
+				}
+				self.RedGainValue = seriesActions.RedGain.dropdown[self.RedGainIndex].id
+
+				await sendCam(self, seriesActions.RedGain.cmd + self.RedGainValue.toUpperCase())
+			},
+		}
+	}
+
+	if (seriesActions.RedGain) {
+		actions.RedGainSet = {
+			name: 'Color Correction Blue Gain Set',
+			options: [
+				{
+					type: 'dropdown',
+					label: 'Color Temperature',
+					id: 'val',
+					default: seriesActions.RedGain.dropdown[0].id,
+					choices: seriesActions.RedGain.dropdown,
+				},
+			],
+			callback: async (action) => {
+				
+				let id = action.options.val.toUpperCase();
+				let index = seriesActions.RedGain.dropdown.findIndex((RedGain) => RedGain.id == id);
+
+				self.RedGainIndex = index;
+				self.RedGainValue = id;
+
+				await sendCam(self, seriesActions.RedGain.cmd + id)
+			},
+		}
+	}
+
+	if (seriesActions.RedGain) { 
+		actions.RedGainUp = {
+			name: 'Color Correction Red Gain Up',
+			options: [],
+			callback: async (action) => {
+				if (self.RedGainIndex == seriesActions.RedGain.dropdown.length) {
+					self.RedGainIndex = seriesActions.RedGain.dropdown.length
+				} else if (self.RedGainIndex < seriesActions.RedGain.dropdown.length) {
+					self.RedGainIndex++
+				}
+				self.RedGainValue = seriesActions.RedGain.dropdown[self.RedGainIndex].id
+
+				await sendCam(self, seriesActions.RedGain.cmd + self.RedGainValue.toUpperCase())
+			},
+		}
+	}
+	
+	if (seriesActions.RedGain) {
+		actions.RedGainDown = {
+			name: 'Color Correction Red Gain Down',
+			options: [],
+			callback: async (action) => {
+				if (self.RedGainIndex == 0) {
+					self.RedGainIndex = 0
+				} else if (self.RedGainIndex > 0) {
+					self.RedGainIndex--
+				}
+				self.RedGainValue = seriesActions.RedGain.dropdown[self.RedGainIndex].id
+
+				await sendCam(self, seriesActions.RedGain.cmd + self.RedGainValue.toUpperCase())
+			},
+		}
+	}
+
+	if (seriesActions.RedGain) {
+		actions.RedGainSet = {
+			name: 'Color Correction Red Gain Set',
+			options: [
+				{
+					type: 'dropdown',
+					label: 'Color Temperature',
+					id: 'val',
+					default: seriesActions.RedGain.dropdown[0].id,
+					choices: seriesActions.RedGain.dropdown,
+				},
+			],
+			callback: async (action) => {
+				
+				let id = action.options.val.toUpperCase();
+				let index = seriesActions.RedGain.dropdown.findIndex((RedGain) => RedGain.id == id);
+
+				self.RedGainIndex = index;
+				self.RedGainValue = id;
+
+				await sendCam(self, seriesActions.RedGain.cmd + id)
+			},
+		}
+	}
+
 	if (seriesActions.filter.cmd) {
 		actions.filterU = {
 			name: 'Exposure - ND Filter Up',

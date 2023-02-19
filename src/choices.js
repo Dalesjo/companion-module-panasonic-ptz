@@ -612,4 +612,15 @@ export const c = {
 		{ "id": "077", "label": "14000K" },
 		{ "id": "078", "label": "15000K" },
 	],
+
+	CHOICES_COLOR_GAIN_HE130: function () {
+		const p = []
+		for (let i = 0; i <= 300; ++i) {
+			p.push({
+				id: ('0' + i.toString(16)).substr(-3, 3).toUpperCase(),
+				label: (i - 150).toString(),
+			})
+		}
+		return p
+	},
 }
