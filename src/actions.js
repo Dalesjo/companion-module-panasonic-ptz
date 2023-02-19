@@ -776,7 +776,7 @@ export function getActionDefinitions(self) {
 
 	if (seriesActions.BlueGain) { 
 		actions.BlueGainUp = {
-			name: 'Color Correction Blue Gain Up',
+			name: 'Color Blue Gain Up',
 			options: [],
 			callback: async (action) => {
 				if (self.BlueGainIndex == seriesActions.BlueGain.dropdown.length) {
@@ -793,7 +793,7 @@ export function getActionDefinitions(self) {
 	
 	if (seriesActions.BlueGain) {
 		actions.BlueGainDown = {
-			name: 'Color Correction Blue Gain Down',
+			name: 'Color Blue Gain Down',
 			options: [],
 			callback: async (action) => {
 				if (self.BlueGainIndex == 0) {
@@ -810,11 +810,11 @@ export function getActionDefinitions(self) {
 
 	if (seriesActions.BlueGain) {
 		actions.BlueGainSet = {
-			name: 'Color Correction Blue Gain Set',
+			name: 'Color Blue Gain Set',
 			options: [
 				{
 					type: 'dropdown',
-					label: 'Color Temperature',
+					label: 'Blue Gain',
 					id: 'val',
 					default: seriesActions.BlueGain.dropdown[0].id,
 					choices: seriesActions.BlueGain.dropdown,
@@ -835,7 +835,7 @@ export function getActionDefinitions(self) {
 
 	if (seriesActions.RedGain) { 
 		actions.RedGainUp = {
-			name: 'Color Correction Red Gain Up',
+			name: 'Color Red Gain Up',
 			options: [],
 			callback: async (action) => {
 				if (self.RedGainIndex == seriesActions.RedGain.dropdown.length) {
@@ -852,7 +852,7 @@ export function getActionDefinitions(self) {
 	
 	if (seriesActions.RedGain) {
 		actions.RedGainDown = {
-			name: 'Color Correction Red Gain Down',
+			name: 'Color Red Gain Down',
 			options: [],
 			callback: async (action) => {
 				if (self.RedGainIndex == 0) {
@@ -869,11 +869,11 @@ export function getActionDefinitions(self) {
 
 	if (seriesActions.RedGain) {
 		actions.RedGainSet = {
-			name: 'Color Correction Red Gain Set',
+			name: 'Color Red Gain Set',
 			options: [
 				{
 					type: 'dropdown',
-					label: 'Color Temperature',
+					label: 'Red Gain',
 					id: 'val',
 					default: seriesActions.RedGain.dropdown[0].id,
 					choices: seriesActions.RedGain.dropdown,
@@ -894,7 +894,7 @@ export function getActionDefinitions(self) {
 
 	if (seriesActions.BluePedestal) { 
 		actions.BluePedestalUp = {
-			name: 'Color Correction Blue Pedestal Up',
+			name: 'Color Blue Pedestal Up',
 			options: [],
 			callback: async (action) => {
 				if (self.BluePedestalIndex == seriesActions.BluePedestal.dropdown.length) {
@@ -911,7 +911,7 @@ export function getActionDefinitions(self) {
 
 	if (seriesActions.BluePedestal) {
 		actions.BluePedestalDown = {
-			name: 'Color Correction Blue Pedestal Down',
+			name: 'Color Blue Pedestal Down',
 			options: [],
 			callback: async (action) => {
 				if (self.BluePedestalIndex == 0) {
@@ -928,7 +928,7 @@ export function getActionDefinitions(self) {
 
 	if (seriesActions.BluePedestal) {
 		actions.BluePedestalSet = {
-			name: 'Color Correction Blue Pedestal Set',
+			name: 'Color Blue Pedestal Set',
 			options: [
 				{
 					type: 'dropdown',
@@ -953,7 +953,7 @@ export function getActionDefinitions(self) {
 
 	if (seriesActions.RedPedestal) { 
 		actions.RedPedestalUp = {
-			name: 'Color Correction Red Pedestal Up',
+			name: 'Color Red Pedestal Up',
 			options: [],
 			callback: async (action) => {
 				if (self.RedPedestalIndex == seriesActions.RedPedestal.dropdown.length) {
@@ -970,7 +970,7 @@ export function getActionDefinitions(self) {
 
 	if (seriesActions.RedPedestal) {
 		actions.RedPedestalDown = {
-			name: 'Color Correction Red Pedestal Down',
+			name: 'Color Red Pedestal Down',
 			options: [],
 			callback: async (action) => {
 				if (self.RedPedestalIndex == 0) {
@@ -987,7 +987,7 @@ export function getActionDefinitions(self) {
 
 	if (seriesActions.RedPedestal) {
 		actions.RedPedestalSet = {
-			name: 'Color Correction Red Pedestal Set',
+			name: 'Color Red Pedestal Set',
 			options: [
 				{
 					type: 'dropdown',
