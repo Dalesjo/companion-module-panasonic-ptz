@@ -623,4 +623,15 @@ export const c = {
 		}
 		return p
 	},
+
+	CHOICES_COLOR_PEDESTAL_HE130: function () {
+		const p = []
+		for (let i = 50; i <= 250; ++i) {
+			p.push({
+				id: ('0' + i.toString(16)).substr(-3, 3).toUpperCase(),
+				label: (i - 150).toString(),
+			})
+		}
+		return p
+	},
 }

@@ -44,6 +44,12 @@ export function setVariables(self) {
 	if (SERIES.variables.RedGain) {
 		variables.push({ variableId: 'RedGain', name: 'Color Correction Red Gain' })
 	}
+	if (SERIES.variables.BluePedestal) {
+		variables.push({ variableId: 'BluePedestal', name: 'Color Correction Blue Pedestal' })
+	}
+	if (SERIES.variables.RedPedestal) {
+		variables.push({ variableId: 'RedPedestal', name: 'Color Correction Red Pedestal' })
+	}
 	if (SERIES.variables.iris) {
 		variables.push({ variableId: 'irisMode', name: 'Auto Iris Mode' })
 	}
@@ -81,6 +87,14 @@ export function checkVariables(self) {
 		? SERIES.actions.RedGain.dropdown.find((RedGain) => RedGain.id == self.data.RedGain) 
 		: null
 
+	const BluePedestal = SERIES.actions.BluePedestal 
+		? SERIES.actions.BluePedestal.dropdown.find((BluePedestal) => BluePedestal.id == self.data.BluePedestal) 
+		: null
+	
+	const RedPedestal = SERIES.actions.RedPedestal 
+		? SERIES.actions.RedPedestal.dropdown.find((RedPedestal) => RedPedestal.id == self.data.RedPedestal) 
+		: null
+
 
 	self.setVariableValues({
 		series: self.data.series,
@@ -95,6 +109,8 @@ export function checkVariables(self) {
 		ColorTemperature: ColorTemperature?.label,
 		BlueGain: BlueGain?.label,
 		RedGain: RedGain?.label,
+		BluePedestal: BluePedestal?.label,
+		RedPedestal: RedPedestal?.label,
 		irisMode: self.data.irisMode,
 		gainValue: gainValue?.label,
 		presetMode: self.data.recallModePset,

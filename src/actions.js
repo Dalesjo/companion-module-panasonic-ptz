@@ -833,65 +833,6 @@ export function getActionDefinitions(self) {
 		}
 	}
 
-		if (seriesActions.RedGain) { 
-		actions.RedGainUp = {
-			name: 'Color Correction Blue Gain Up',
-			options: [],
-			callback: async (action) => {
-				if (self.RedGainIndex == seriesActions.RedGain.dropdown.length) {
-					self.RedGainIndex = seriesActions.RedGain.dropdown.length
-				} else if (self.RedGainIndex < seriesActions.RedGain.dropdown.length) {
-					self.RedGainIndex++
-				}
-				self.RedGainValue = seriesActions.RedGain.dropdown[self.RedGainIndex].id
-
-				await sendCam(self, seriesActions.RedGain.cmd + self.RedGainValue.toUpperCase())
-			},
-		}
-	}
-	
-	if (seriesActions.RedGain) {
-		actions.RedGainDown = {
-			name: 'Color Correction Blue Gain Down',
-			options: [],
-			callback: async (action) => {
-				if (self.RedGainIndex == 0) {
-					self.RedGainIndex = 0
-				} else if (self.RedGainIndex > 0) {
-					self.RedGainIndex--
-				}
-				self.RedGainValue = seriesActions.RedGain.dropdown[self.RedGainIndex].id
-
-				await sendCam(self, seriesActions.RedGain.cmd + self.RedGainValue.toUpperCase())
-			},
-		}
-	}
-
-	if (seriesActions.RedGain) {
-		actions.RedGainSet = {
-			name: 'Color Correction Blue Gain Set',
-			options: [
-				{
-					type: 'dropdown',
-					label: 'Color Temperature',
-					id: 'val',
-					default: seriesActions.RedGain.dropdown[0].id,
-					choices: seriesActions.RedGain.dropdown,
-				},
-			],
-			callback: async (action) => {
-				
-				let id = action.options.val.toUpperCase();
-				let index = seriesActions.RedGain.dropdown.findIndex((RedGain) => RedGain.id == id);
-
-				self.RedGainIndex = index;
-				self.RedGainValue = id;
-
-				await sendCam(self, seriesActions.RedGain.cmd + id)
-			},
-		}
-	}
-
 	if (seriesActions.RedGain) { 
 		actions.RedGainUp = {
 			name: 'Color Correction Red Gain Up',
@@ -947,6 +888,124 @@ export function getActionDefinitions(self) {
 				self.RedGainValue = id;
 
 				await sendCam(self, seriesActions.RedGain.cmd + id)
+			},
+		}
+	}
+
+	if (seriesActions.BluePedestal) { 
+		actions.BluePedestalUp = {
+			name: 'Color Correction Blue Pedestal Up',
+			options: [],
+			callback: async (action) => {
+				if (self.BluePedestalIndex == seriesActions.BluePedestal.dropdown.length) {
+					self.BluePedestalIndex = seriesActions.BluePedestal.dropdown.length
+				} else if (self.BluePedestalIndex < seriesActions.BluePedestal.dropdown.length) {
+					self.BluePedestalIndex++
+				}
+				self.BluePedestalValue = seriesActions.BluePedestal.dropdown[self.BluePedestalIndex].id
+
+				await sendCam(self, seriesActions.BluePedestal.cmd + self.BluePedestalValue.toUpperCase())
+			},
+		}
+	}
+
+	if (seriesActions.BluePedestal) {
+		actions.BluePedestalDown = {
+			name: 'Color Correction Blue Pedestal Down',
+			options: [],
+			callback: async (action) => {
+				if (self.BluePedestalIndex == 0) {
+					self.BluePedestalIndex = 0
+				} else if (self.BluePedestalIndex > 0) {
+					self.BluePedestalIndex--
+				}
+				self.BluePedestalValue = seriesActions.BluePedestal.dropdown[self.BluePedestalIndex].id
+
+				await sendCam(self, seriesActions.BluePedestal.cmd + self.BluePedestalValue.toUpperCase())
+			},
+		}
+	}
+
+	if (seriesActions.BluePedestal) {
+		actions.BluePedestalSet = {
+			name: 'Color Correction Blue Pedestal Set',
+			options: [
+				{
+					type: 'dropdown',
+					label: 'Blue Pedestal',
+					id: 'val',
+					default: seriesActions.BluePedestal.dropdown[0].id,
+					choices: seriesActions.BluePedestal.dropdown,
+				},
+			],
+			callback: async (action) => {
+
+				let id = action.options.val.toUpperCase();
+				let index = seriesActions.BluePedestal.dropdown.findIndex((BluePedestal) => BluePedestal.id == id);
+
+				self.BluePedestalIndex = index;
+				self.BluePedestalValue = id;
+
+				await sendCam(self, seriesActions.BluePedestal.cmd + id)
+			},
+		}
+	}
+
+	if (seriesActions.RedPedestal) { 
+		actions.RedPedestalUp = {
+			name: 'Color Correction Red Pedestal Up',
+			options: [],
+			callback: async (action) => {
+				if (self.RedPedestalIndex == seriesActions.RedPedestal.dropdown.length) {
+					self.RedPedestalIndex = seriesActions.RedPedestal.dropdown.length
+				} else if (self.RedPedestalIndex < seriesActions.RedPedestal.dropdown.length) {
+					self.RedPedestalIndex++
+				}
+				self.RedPedestalValue = seriesActions.RedPedestal.dropdown[self.RedPedestalIndex].id
+
+				await sendCam(self, seriesActions.RedPedestal.cmd + self.RedPedestalValue.toUpperCase())
+			},
+		}
+	}
+
+	if (seriesActions.RedPedestal) {
+		actions.RedPedestalDown = {
+			name: 'Color Correction Red Pedestal Down',
+			options: [],
+			callback: async (action) => {
+				if (self.RedPedestalIndex == 0) {
+					self.RedPedestalIndex = 0
+				} else if (self.RedPedestalIndex > 0) {
+					self.RedPedestalIndex--
+				}
+				self.RedPedestalValue = seriesActions.RedPedestal.dropdown[self.RedPedestalIndex].id
+
+				await sendCam(self, seriesActions.RedPedestal.cmd + self.RedPedestalValue.toUpperCase())
+			},
+		}
+	}
+
+	if (seriesActions.RedPedestal) {
+		actions.RedPedestalSet = {
+			name: 'Color Correction Red Pedestal Set',
+			options: [
+				{
+					type: 'dropdown',
+					label: 'Red Pedestal',
+					id: 'val',
+					default: seriesActions.RedPedestal.dropdown[0].id,
+					choices: seriesActions.RedPedestal.dropdown,
+				},
+			],
+			callback: async (action) => {
+
+				let id = action.options.val.toUpperCase();
+				let index = seriesActions.RedPedestal.dropdown.findIndex((RedPedestal) => RedPedestal.id == id);
+
+				self.RedPedestalIndex = index;
+				self.RedPedestalValue = id;
+
+				await sendCam(self, seriesActions.RedPedestal.cmd + id)
 			},
 		}
 	}

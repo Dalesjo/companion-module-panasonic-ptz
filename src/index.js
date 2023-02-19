@@ -257,6 +257,12 @@ class PanasonicPTZInstance extends InstanceBase {
 			case 'ORI':
 				this.data.RedGain = str[1];
 			break;
+			case 'OBP':
+				this.data.BluePedestal = str[1];
+			break;
+			case 'ORP':
+				this.data.RedPedestal = str[1];
+			break;
 			case 'd30':
 				this.data.irisMode = 'Manual'
 				break
@@ -315,6 +321,8 @@ class PanasonicPTZInstance extends InstanceBase {
 			recallModePset: 'NaN',
 			BlueGain: 'Nan',
 			RedGain: 'Nan',
+			BluePedestal: 'Nan',
+			RedPedestal: 'Nan',
 		}
 
 		this.ptSpeed = 25
@@ -339,6 +347,10 @@ class PanasonicPTZInstance extends InstanceBase {
 		this.BlueGainIndex = 128
 		this.RedGainValue = '80'
 		this.RedGainIndex = 128
+		this.BluePedestalValue = '096'
+		this.BluePedestalIndex = 100
+		this.RedPedestalValue = '096'
+		this.RedPedestalIndex = 100
 		this.tcpPortSelected = 31004
 		this.tcpPortOld = this.config.tcpPort || 31004
 

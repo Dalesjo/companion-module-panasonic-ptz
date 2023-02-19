@@ -71,6 +71,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 		feedbacks: {
 			powerState: true, // Power State (p1 or p0)
@@ -104,6 +106,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false, // Setting Color temperature OSD:B1:A8h
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 	},
 
@@ -123,6 +127,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -156,6 +162,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 	},
 
@@ -175,6 +183,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -208,6 +218,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 	},
 
@@ -227,6 +239,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -260,6 +274,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 	},
 
@@ -279,6 +295,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -312,6 +330,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 	},
 
@@ -331,6 +351,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -364,6 +386,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 	},
 
@@ -383,6 +407,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -416,6 +442,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 	},
 
@@ -435,6 +463,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -468,6 +498,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 	},
 
@@ -487,6 +519,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -520,6 +554,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 	},
 
@@ -539,6 +575,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: true,
 			BlueGain: true,
 			RedGain: true,
+			BluePedestal: true,
+			RedPedestal: true,
 		},
 		feedbacks: {
 			powerState: true,
@@ -572,6 +610,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: { cmd: 'OSD:B1:', dropdown: c.CHOICES_COLOR_TEMPERATURE_HE130},
 			BlueGain: { cmd: 'OBI:', dropdown: c.CHOICES_COLOR_GAIN_HE130()},
 			RedGain: { cmd: 'ORI:', dropdown: c.CHOICES_COLOR_GAIN_HE130()},
+			BluePedestal: { cmd: 'OBP:', dropdown: c.CHOICES_COLOR_PEDESTAL_HE130()},
+			RedPedestal: { cmd: 'ORP:', dropdown: c.CHOICES_COLOR_PEDESTAL_HE130()},
 		},
 	},
 
@@ -589,6 +629,10 @@ export const SERIES_SPECS = [
 			gainValue: true,
 			preset: true,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -622,6 +666,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 	},
 
@@ -641,6 +687,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -674,6 +722,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 	},
 
@@ -691,6 +741,10 @@ export const SERIES_SPECS = [
 			gainValue: true,
 			preset: true,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -724,6 +778,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 	},
 
@@ -741,6 +797,10 @@ export const SERIES_SPECS = [
 			gainValue: true,
 			preset: true,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -774,6 +834,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 	},
 
@@ -789,6 +851,10 @@ export const SERIES_SPECS = [
 			iris: false,
 			preset: false,
 			ColorTemperature: false,
+			BlueGain: false,
+			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 		feedbacks: {
 			powerState: true,
@@ -821,6 +887,8 @@ export const SERIES_SPECS = [
 			ColorTemperature: false,
 			BlueGain: false,
 			RedGain: false,
+			BluePedestal: false,
+			RedPedestal: false,
 		},
 	},
 ]
