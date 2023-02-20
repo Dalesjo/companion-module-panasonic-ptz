@@ -248,20 +248,20 @@ class PanasonicPTZInstance extends InstanceBase {
 			case 'OSD':
 				if(str[1] == 'B1')
 				{
-					this.data.ColorTemperature = str[2];
+					this.data.ColorTemperature = str[2].replace("0x", "");
 				}
 			break;
 			case 'OBI':
-				this.data.BlueGain = str[1];
+				this.data.BlueGain = str[1].replace("0x", "");
 			break;
 			case 'ORI':
-				this.data.RedGain = str[1];
+				this.data.RedGain = str[1].replace("0x", "");
 			break;
 			case 'OBP':
-				this.data.BluePedestal = str[1];
+				this.data.BluePedestal = str[1].replace("0x", "");
 			break;
 			case 'ORP':
-				this.data.RedPedestal = str[1];
+				this.data.RedPedestal = str[1].replace("0x", "");
 			break;
 			case 'd30':
 				this.data.irisMode = 'Manual'
